@@ -1,0 +1,48 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #b91450;
+    width: 100vw;
+    text-align: center;
+}
+.d-flex {
+    display: flex;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+#input_box,
+#ticket_box {
+    width: 80%;
+    min-height: 200px;
+    background: #ffffff;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+#titolo {
+    color: white;
+    text-align: center;
+    line-height: 50px;
+}
+
+.col {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+tbody {
+    background-color: grey;
+    height: 20px;
+}
+

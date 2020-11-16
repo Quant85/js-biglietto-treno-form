@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biglietto Treno Form </title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+</head>
+    <body>
+
+        <main id="site_main">
+            <h1 id="titolo">Calcola il Prezzo del Tuo Biglietto</h1>
+
+            <section id="input_box" class="d-flex">
+                <div id="ticket_form" class="box_card">
+                    <div class="row d-flex">
+                        <div class="col d-flex">
+                            <!-- deve essere un testo, in caso contrario alert -->
+                            <label for="name">Nome e Cognome</label>
+                            <input type="text" name="name" id="full_name">
+                        </div>
+                        <!-- /.col -->
+                        <div class="col">
+                            <!-- deve essere un numero, in caso contrario alert -->
+                            <label for="name">Km da percorrere</label>
+                            <input type="number" name="km" id="percorrenza_km">
+                        </div>
+                        <!-- /.col -->
+                        <div class="col">
+                            <label for="name">Fascia d'età</label>
+                            <select name="range_age" id="range_age">
+                                <option value="minorenne">Minorenne</option>
+                                <option value="maggiorenne">Maggiorenne</option>
+                                <option value="over65">Over65</option>
+                            </select>
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+                    <div class="row">
+                        <input type="submit" id="bt_genera" value="Genera">
+                        <input type="button" id="bt_annulla" value="Annulla">
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.box_card -->
+
+            </section>
+
+            <h2 class="">
+                IL TUO BIGLIETTO
+            </h2>
+            <section id="ticket" >
+                <h3>Dettaglio Passeggeri</h3>
+                <div id="ticket_box" class="d-flex wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nome Passeggero</th>
+                                <th>Offerta</th>
+                                <th>Carrozza</th>
+                                <th>Codice CP</th>
+                                <th>Costo Biglietto</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td id="passenger_name"></td>
+                                <td id="discount_offer"></td>
+                                <td id="train_carriage"></td>
+                                <td id="cp_code"></td>
+                                <td id="ticket_cost"></td>
+                            </tr>
+                        </tbody>    
+                    </table>
+                </div>
+            </section>
+
+        </main>
+        <script src="assets/js/main.js" type="text/javascript"></script>
+    </body>
+</html>
