@@ -12,12 +12,14 @@ var ticketCost;
 var trainCarriage;
 var cpCode;
 
+var fullNameInput = document.getElementById("full_name");
+var kmSelectedInput = document.getElementById("percorrenza_km");
+var ageGroupInput = document.getElementById("range_age");
+
 btnGenera.addEventListener("click", function () {
     //Genera
-    console.log("Genera il ticket");
-    var fullNameInput = document.getElementById("full_name");
-    var kmSelectedInput = document.getElementById("percorrenza_km");
-    var ageGroupInput = document.getElementById("range_age");
+
+    
 
     //Selesiona i valori
 
@@ -25,7 +27,7 @@ btnGenera.addEventListener("click", function () {
     var kmSelected = kmSelectedInput.value;
     var ageGroup = ageGroupInput.value;
 
-    console.log(fullName, kmSelected, ageGroup);
+    //console.log(fullName, kmSelected, ageGroup);
 
     if (ageGroup == "minorenne") {
     
@@ -54,8 +56,13 @@ btnGenera.addEventListener("click", function () {
     document.getElementById("cp_code").innerHTML =  cpCode;
     document.getElementById("ticket_cost").innerHTML = ticketCost.toFixed(2) + " \u20AC";
     
+    //modifico lo stile all'attivarsi della funzione
+    document.getElementById("ticket").style.visibility = "visible";
 });
 
-/* btnAnnulla.addEventListener("click", function resetForm() {
-    document.getElementById("ticket_form").reload();
-}); */
+btnAnnulla.addEventListener("click", function() {
+    document.getElementById("ticket").style.visibility = "hidden";
+    document.getElementById('full_name').value = '';
+    document.getElementById('percorrenza_km').value = '';
+    document.getElementById('range_age').value = '';
+});

@@ -21,7 +21,7 @@ body {
 
 #input_box,
 #ticket_box {
-    width: 90%;
+    width: 80%;
     min-height: 140px;
     background: #ffffff;
     margin: auto;
@@ -45,7 +45,16 @@ body {
 
 label,
 .row.input {
+    color: #b91450;
     padding: 20px;
+}
+
+#bt_genera,
+#bt_annulla {
+    font-weight: bold;
+    color: #b91450;
+    padding: 2px 5px;
+    margin: 0 5px;
 }
 
 #titolo, h2 {
@@ -53,11 +62,19 @@ label,
     text-align: center;
     text-transform: uppercase ;
     line-height: 20px;
+    margin-bottom: 10px;
 }
 #titolo {
     margin:40px 0;
 }
+input {
+    border: 1px solid #b91450;
+}
 
+#ticket {
+    visibility: hidden;
+    transition: all 0.8s linear;
+}
 h3 {
     text-align: left;
 }
@@ -72,5 +89,12 @@ table {
     padding: 10px;
     margin: auto;
     text-align: left;
+    border: 1px solid black;
 }
 
+
+
+.ticket_form input {
+    border: 1px solid #b91450;
+    border-radius: 5px;
+}
