@@ -57,11 +57,11 @@ btnGenera.addEventListener("click", function () {
     document.getElementById("ticket_cost").innerHTML = ticketCost.toFixed(2) + " \u20AC";
     
     //modifico lo stile all'attivarsi della funzione
-    document.getElementById("ticket").style.visibility = "visible";
+    document.getElementById("ticket").style.opacity = "1";
 });
 
 btnAnnulla.addEventListener("click", function() {
-    document.getElementById("ticket").style.visibility = "hidden";
+    document.getElementById("ticket").style.opacity = "0";
     document.getElementById('full_name').value = '';
     document.getElementById('percorrenza_km').value = '';
     document.getElementById('range_age').value = '';
