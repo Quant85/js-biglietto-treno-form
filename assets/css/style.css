@@ -21,19 +21,45 @@ body {
 
 #input_box,
 #ticket_box {
-    width: 80%;
-    min-height: 200px;
+    width: 90%;
+    min-height: 140px;
     background: #ffffff;
-    justify-content: center;
-    align-content: center;
     margin: auto;
+    padding: 20px;
     margin-bottom: 30px;
+    align-items: center;
 }
 
-#titolo {
+#input_box {
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px 3px grey;
+}
+
+#ticket_form {
+    width: 100%;
+}
+
+.row {
+    justify-content: space-around;
+}
+
+label,
+.row.input {
+    padding: 20px;
+}
+
+#titolo, h2 {
     color: white;
     text-align: center;
-    line-height: 50px;
+    text-transform: uppercase ;
+    line-height: 20px;
+}
+#titolo {
+    margin:40px 0;
+}
+
+h3 {
+    text-align: left;
 }
 
 .col {
@@ -41,8 +67,10 @@ body {
     flex-flow: column wrap;
 }
 
-tbody {
-    background-color: grey;
-    height: 20px;
+table {
+    width: 100%;
+    padding: 10px;
+    margin: auto;
+    text-align: left;
 }
 

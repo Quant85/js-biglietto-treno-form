@@ -13,12 +13,12 @@
             <h1 id="titolo">Calcola il Prezzo del Tuo Biglietto</h1>
 
             <section id="input_box" class="d-flex">
-                <div id="ticket_form" class="box_card">
+                <div id="ticket_form">
                     <div class="row d-flex">
                         <div class="col d-flex">
                             <!-- deve essere un testo, in caso contrario alert -->
                             <label for="name">Nome e Cognome</label>
-                            <input type="text" name="name" id="full_name">
+                            <input type="text" name="name" id="full_name" placeholder="Inserisci il tuo nome e cognome">
                         </div>
                         <!-- /.col -->
                         <div class="col">
@@ -38,7 +38,7 @@
                         <!-- /.col -->
                     </div>
                     <!-- /.row -->
-                    <div class="row">
+                    <div class="row input">
                         <input type="submit" id="bt_genera" value="Genera">
                         <input type="button" id="bt_annulla" value="Annulla">
                     </div>
@@ -52,8 +52,8 @@
                 IL TUO BIGLIETTO
             </h2>
             <section id="ticket" >
-                <h3>Dettaglio Passeggeri</h3>
-                <div id="ticket_box" class="d-flex wrap">
+                <div id="ticket_box">
+                    <h3>Dettaglio Passeggeri</h3>
                     <table>
                         <thead>
                             <tr>

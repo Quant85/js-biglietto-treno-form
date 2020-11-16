@@ -30,17 +30,17 @@ btnGenera.addEventListener("click", function () {
     if (ageGroup == "minorenne") {
     
         yourDiscount = 0.2;
-        console.log(yourDiscount);
+        //console.log(yourDiscount);
     
     } else if (ageGroup == "over65") {
     
         yourDiscount = 0.4;
-        console.log(yourDiscount);
+        //console.log(yourDiscount);
     
     } else {
     
         yourDiscount = 0;
-        console.log(yourDiscount);
+        //console.log(yourDiscount);
     }
 
     trainCarriage = Math.round(Math.random() * 9) + 1; //mi permette di generare in modo random numeri interi da 0 a 10
