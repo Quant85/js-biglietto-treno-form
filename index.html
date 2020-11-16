@@ -13,12 +13,13 @@
             <h1 id="titolo">Calcola il Prezzo del Tuo Biglietto</h1>
 
             <section id="input_box" class="d-flex">
+                <!-- questa sezione avrebbe dovuto essere un form, ma da problemi con la funzione js -->
                 <div id="ticket_form">
                     <div class="row d-flex">
                         <div class="col d-flex">
                             <!-- deve essere un testo, in caso contrario alert -->
                             <label for="name">Nome Cognome</label>
-                            <input type="text" name="name" id="full_name" placeholder="Pippo Pluto">
+                            <input type="text" name="name" id="full_name" placeholder="Pippo Pluto" pattern="[A-Za-z]" title="Inserire nome e cognome">
                         </div>
                         <!-- /.col -->
                         <div class="col">
@@ -48,10 +49,13 @@
                 <!-- /.box_card -->
 
             </section>
+            <!-- /#input_box -->
 
             <h2 class="">
                 IL TUO BIGLIETTO
             </h2>
+
+            <!-- #ticket -->
             <section id="ticket" >
                 <div id="ticket_box">
                     <h3>Dettaglio Passeggeri</h3>
@@ -77,6 +81,7 @@
                     </table>
                 </div>
             </section>
+            <!-- /#ticket -->
 
         </main>
         <script src="assets/js/main.js" type="text/javascript"></script>
