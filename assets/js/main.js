@@ -1,7 +1,5 @@
 
 
-
-
 var btnGenera = document.getElementById("bt_genera");
 var btnAnnulla = document.getElementById("bt_annulla");
 
@@ -12,14 +10,12 @@ var ticketCost;
 var trainCarriage;
 var cpCode;
 
-var fullNameInput = document.getElementById("full_name");
-var kmSelectedInput = document.getElementById("percorrenza_km");
-var ageGroupInput = document.getElementById("range_age");
 
 btnGenera.addEventListener("click", function () {
     //Genera
-
-    
+    var fullNameInput = document.getElementById("full_name");
+    var kmSelectedInput = document.getElementById("percorrenza_km");
+    var ageGroupInput = document.getElementById("range_age");
 
     //Selesiona i valori
 
@@ -60,6 +56,7 @@ btnGenera.addEventListener("click", function () {
     document.getElementById("ticket").style.opacity = "1";
 });
 
+//Permette mediante l'evento click di eseguire una sostituzione dei valori nei tag input del form, in alternativa ad un resetForm o returnStartCicle
 btnAnnulla.addEventListener("click", function() {
     document.getElementById("ticket").style.opacity = "0";
     document.getElementById('full_name').value = '';

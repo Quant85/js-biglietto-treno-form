@@ -19,18 +19,18 @@
                         <div class="col d-flex">
                             <!-- deve essere un testo, in caso contrario alert -->
                             <label for="name">Nome Cognome</label>
-                            <input type="text" name="name" id="full_name" placeholder="Pippo Pluto" pattern="[A-Za-z]" title="Inserire nome e cognome">
+                            <input type="text" name="name" id="full_name" placeholder="Pippo Pluto" pattern="[A-Za-z]" title="Inserire nome e cognome" required>
                         </div>
                         <!-- /.col -->
                         <div class="col">
                             <!-- deve essere un numero, in caso contrario alert -->
                             <label for="name">Km da percorrere</label>
-                            <input type="number" name="km" id="percorrenza_km">
+                            <input type="number" name="km" id="percorrenza_km" required>
                         </div>
                         <!-- /.col -->
                         <div class="col">
                             <label for="name">Fascia d'età</label>
-                            <select name="range_age" id="range_age">
+                            <select name="range_age" id="range_age" required>
                                 <option value="" disabled></option>
                                 <option value="minorenne">Minorenne</option>
                                 <option value="maggiorenne">Maggiorenne</option>
