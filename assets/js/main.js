@@ -44,7 +44,7 @@ btnGenera.addEventListener("click", function () {
     trainCarriage = Math.round(Math.random() * 9) + 1; //mi permette di generare in modo random numeri interi da 0 a 10
     cpCode = Math.round(Math.random() * (99999 - 90000) + 90000); //mi permette di generare in modo random numeri interi in un range definito ( (x * (max - min) + min))
 
-    ticketCost =  costOfKilometer * kmSelected * ( 1 - yourDiscount);
+    ticketCost =  Math.abs(costOfKilometer * kmSelected * ( 1 - yourDiscount));
 
     document.getElementById("passenger_name").innerHTML = fullName;
     document.getElementById("discount_offer").innerHTML =  "Sconto " + ageGroup;
