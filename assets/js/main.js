@@ -1,27 +1,24 @@
 
+var btnGenera, btnAnnulla, costOfKilometer, yourDiscount, ticketCost, trainCarriage, cpCode, fullNameInput, kmSelectedInput, ageGroupInput, fullName, kmSelected, ageGroup, tbUserName, tbOffert, tbNumberCarriage, tbCPCode, tbTotalCost;
 
-var btnGenera = document.getElementById("bt_genera");
-var btnAnnulla = document.getElementById("bt_annulla");
+btnGenera = document.getElementById("bt_genera");
+btnAnnulla = document.getElementById("bt_annulla");
 
-var costOfKilometer = 0.21;
-var yourDiscount;
-var ticketCost;
+costOfKilometer = 0.21;
 
-var trainCarriage;
-var cpCode;
 
 
 btnGenera.addEventListener("click", function () {
     //Genera
-    var fullNameInput = document.getElementById("full_name");
-    var kmSelectedInput = document.getElementById("percorrenza_km");
-    var ageGroupInput = document.getElementById("range_age");
+fullNameInput = document.getElementById("full_name");
+kmSelectedInput = document.getElementById("percorrenza_km");
+ageGroupInput = document.getElementById("range_age");
 
     //Selesiona i valori
 
-    var fullName = fullNameInput.value;
-    var kmSelected = kmSelectedInput.value;
-    var ageGroup = ageGroupInput.value;
+fullName = fullNameInput.value;
+kmSelected = kmSelectedInput.value;
+ageGroup = ageGroupInput.value;
 
     //console.log(fullName, kmSelected, ageGroup);
 
@@ -46,19 +43,28 @@ btnGenera.addEventListener("click", function () {
 
     ticketCost =  Math.abs(costOfKilometer * kmSelected * ( 1 - yourDiscount));
 
-    document.getElementById("passenger_name").innerHTML = fullName;
-    document.getElementById("discount_offer").innerHTML =  "Sconto " + ageGroup;
-    document.getElementById("train_carriage").innerHTML =  trainCarriage;
-    document.getElementById("cp_code").innerHTML =  cpCode;
-    document.getElementById("ticket_cost").innerHTML = ticketCost.toFixed(2) + " \u20AC";
+tbUserName = document.getElementById("passenger_name");
+tbOffert = document.getElementById("discount_offer");
+tbNumberCarriage = document.getElementById("train_carriage");
+tbCPCode = document.getElementById("cp_code");
+tbTotalCost = document.getElementById("ticket_cost");
+
+    tbUserName.innerHTML = fullName;
+    tbOffert.innerHTML =  "Sconto " + ageGroup;
+    tbNumberCarriage.innerHTML =  trainCarriage;
+    tbCPCode.innerHTML =  cpCode;
+    tbTotalCost.innerHTML = ticketCost.toFixed(2) + " \u20AC";
     
     //modifico lo stile all'attivarsi della funzione
+
     document.getElementById("ticket").style.opacity = "1";
 });
 
 //Permette mediante l'evento click di eseguire una sostituzione dei valori nei tag input del form, in alternativa ad un resetForm o returnStartCicle
 btnAnnulla.addEventListener("click", function() {
-    document.getElementById("ticket").style.opacity = "0";
+
+
+    document.getElementById("ticket").style.opacity = "0"; // posso agire cambiando la classe
     document.getElementById('full_name').value = '';
     document.getElementById('percorrenza_km').value = '';
     document.getElementById('range_age').value = '';
